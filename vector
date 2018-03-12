@@ -1,0 +1,61 @@
+// ConsoleApplication19.cpp: определяет точку входа для консольного приложения.
+//
+
+#include "stdafx.h"
+#include "iostream"
+#include "string"
+#include "vector"
+using namespace std;
+
+int main()
+{
+	vector<string> inventory;
+	inventory.push_back("sword");
+	inventory.push_back("armor");
+	inventory.push_back("shield");
+	cout << "You have" << inventory.size() << "items.\n";
+	cout << "\Your items:\n";
+	for (unsigned int i = 0; i < inventory.size(); ++i)
+	{
+		cout << inventory[i] << endl;
+
+	}
+	cout << "\nThe trade your sword for a battle axe ";
+	inventory[0] = "battle axe";
+	cout << "\nYour items :\n";
+	for (unsigned int i = 0; i < inventory.size(); ++i)
+	{
+		cout<< inventory[i] << endl;
+
+	}
+	
+	cout << "\nThe item name ' " << inventory[0] << " 'has";
+	cout << inventory[0].size() << " letters in it/ \n";
+	cout << "\n your shild is destroyed in a fierce battle ";
+	inventory.pop_back();
+
+	cout << "\nYour items :\n";
+
+	for (unsigned int i = 0; i < inventory.size(); i++)
+	{
+		cout << inventory[i] << endl;
+
+	}
+
+	cout << "\nYou were robbed of all your possesions by a thief";
+
+		inventory.clear();
+	if (inventory.empty())
+	{
+		cout << "\nYou have nothing \n";
+	}
+
+	else
+	{
+		cout << "You have at least one item\n";
+
+	}
+	system ("pause");
+    return 0;
+}
+
